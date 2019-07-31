@@ -1,0 +1,65 @@
+.huge-icon {
+    font-size: 3.5em !important;
+}
+
+.step {
+    position: relative;
+}
+
+@media (max-height:768px) and (max-width:1366px) {
+    .ui.massive.step, .ui.massive.steps .step {
+        font-size: 1.3rem;
+    }
+}
+
+.hospital-details {
+    /* visibility: hidden; */
+    position: absolute;
+    z-index: 1;
+    top: 22px;
+    left: 33px;
+}
+
+.circular.icon:hover {
+    opacity: 0.5;
+    background: rgba(105, 167, 159, 0.815);
+    color: white;
+}
+
+.circular.icon:hover .hospital-details {
+    visibility: visible;
+}
+
+.circular.icon.disabled:hover {
+    cursor: not-allowed;
+    background: inherit;
+    color: inherit;
+}
+
+.ui.steps .step {
+    padding: 40px 0 40px 0;
+}
+.ui.steps .step .title {
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.ui.steps .step .description {
+    font-size: 17px !important;
+    color: teal;
+}
+.success {
+    background: #ccf2cc !important;
+}
+.error {
+    background: #f0adad80!important;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+.ui.steps .step:after {
+    background-color: inherit;
+}
+
+

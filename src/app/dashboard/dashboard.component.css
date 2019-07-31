@@ -1,0 +1,53 @@
+.dashboard {
+    
+}
+.ui.placeholder.segment {
+    top: 50px;
+    /* background: rgba(0, 83, 131, 0.88); */
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to right, #50bebe 0%, #099 33%, #0099b0 66%, #0099cb 100%);
+    opacity: 0.85;
+}
+.ui.center.aligned.icon.header {
+    color: inherit;
+}
+.ui.massive.tablet{
+    bottom: 120px;
+    position: absolute;
+    left: 140px;
+    width: 85%;
+}
+
+.ui.massive.steps .step {
+    background: rgba(172, 172, 172, 0.3);
+    padding: 5% 0px;
+    color: rgb(2, 105, 165);
+}
+.ui.massive.steps .step:hover{
+    background: rgba(2, 105, 165, 0.28);
+    padding: 5% 0px;
+    color: black;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+}
+
+.aligncenter {
+    position: absolute;
+    left: 25px;
+}
+
+.content {
+    position: absolute;
+    left: 44%;
+}
+
+.ui.steps .step .title {
+    margin: 15px 0px;
+}
+
+.ui.steps .step .description {
+    font-size: 12px;
+    text-align: center;
+    color: inherit;
+}

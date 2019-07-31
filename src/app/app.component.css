@@ -1,0 +1,37 @@
+
+  
+  .App-header {
+    background-color: #69a79f;
+    padding: 10px;
+    color: white;
+    text-align: center;
+  }
+  
+  .mdsp {
+    font-size: 20px;
+    color: #607D8B !important;
+    font-weight: 700!important;
+    width: 180px;
+  }
+  
+  .App-intro {
+    font-size: large;
+  }
+  
+  .app-container {
+    width: 85% !important;
+  }
+
+  .navbar {
+    background: #91b5c787;
+  }
+
+  .logo {
+    margin-right: 20px;
+  }
+  
+  @keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  

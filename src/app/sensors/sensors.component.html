@@ -1,0 +1,64 @@
+<div id="context" class="ui container app-container">
+    <div>
+        <button class="ui labeled icon button backToHome mdspTitle" (click)="navigateToHome()">
+            <i class="left arrow icon"></i>
+            Home
+        </button>
+        <h2 class="ui icon header" style="margin-top: 21px">
+            <div class="content">
+                Marketplace Sensors
+                <div class="sub header">Click below to view and purchase sensor data stream</div>
+            </div>
+        </h2>
+    </div>
+    <div class="ui card" *ngFor="let sensor of sensors" (click)="showModal(sensor)">
+        <div class="meta">
+            <span class="date">{{sensor.company ? sensor.company : 'Allego'}}</span>
+        </div>
+        <div class="content">
+            <a class="header mdspTitle">{{sensor.sensorId}}</a>
+            <div class="meta">
+                <span class="date">{{sensor.type}}</span>
+            </div>
+            <div class="description">
+                <span style="float: left">Price</span>
+                <span style="float: right">{{sensor.price ? sensor.price : 12.23}} MindCoin</span>
+            </div>
+        </div>
+        <div class="extra content">
+            <span>{{sensor.location.city}}
+                <h5>{{sensor.location.country}}</h5>
+            </span>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="ui tiny modal purchaseDevice">
+    <i class="close icon"></i>
+
+    <div class="header" style="text-align: center">
+        <h4>Purchase device stream</h4>
+        <span class="mdspTitle">{{selectedSensor.sensorId}}</span>
+    </div>
+    <div class="image content">
+        <div class="description">
+            <p>You can purchase access to this device's data stream by clicking below.</p>
+        </div>
+    </div>
+    <div class="actions">
+        Purchase access for
+        <b>{{selectedSensor.price ? selectedSensor.price : 12.23}} MindCoin </b>
+        <div class="ui positive right labeled icon button">
+            Buy
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+
+<div class="ui tiny modal mdspLoader">
+    <div class="ui massive text loader">Loading Device</div>
+</div>
+<div class="ui tiny modal sensorLoader">
+    <div class="ui massive text loader">Fetching Sensor Details</div>
+</div>

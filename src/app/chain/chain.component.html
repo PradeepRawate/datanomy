@@ -1,0 +1,119 @@
+<div class="ui modal status fullscreen" *ngIf="shipmentData">
+  <i class="close icon"></i>
+  <div class="header">
+    Shipment Status
+  </div>
+  <div class="content">
+    <div class="Home">
+      <div class="ui massive tablet stackable six steps">
+        <div class="step" [ngClass]="getShipmentStatus(shipmentData.manufacturer)">
+          <i class="pills icon"></i>
+          <div class="content">
+            <div class="title">Manufacturer</div>
+            <div class="description">Temperature: {{shipmentData.manufacturer}}</div>
+            <div class="description">Humidity: {{shipmentData.manufacturerhumidity}}</div>
+          </div>
+        </div>
+        <div class="step" [ngClass]="getShipmentStatus(shipmentData.dist)">
+          <i class="truck icon"></i>
+          <div class="content">
+            <div class="title">Distributer</div>
+            <div class="description">Temperature: {{shipmentData.dist}} </div>
+            <div class="description">Humidity: {{shipmentData.disthumidity}} </div>
+          </div>
+        </div>
+        <div class="step" [ngClass]="getShipmentStatus(shipmentData.wholesaler)">
+          <i class="boxes icon"></i>
+          <div class="content">
+            <div class="title">Wholesale Dealer</div>
+            <div class="description">Temperature: {{shipmentData.wholesaler}} </div>
+            <div class="description">Humidity: {{shipmentData.wholesalerhumidity}} </div>
+          </div>
+        </div>
+        <div class="step" [ngClass]="getShipmentStatus(shipmentData.retailer)">
+          <i class="shipping fast icon"></i>
+          <div class="content">
+            <div class="title">Retailer</div>
+            <div class="description">Temperature: {{shipmentData.retailer}} </div>
+            <div class="description">Humidity: {{shipmentData.retailerhumidity}} </div>
+          </div>
+        </div>
+        <div class="step" [ngClass]="getShipmentStatus(shipmentData.pharmacy)">
+          <i class="medkit icon"></i>
+          <div class="content">
+            <div class="title">Pharmacy</div>
+            <div class="description">Temperature: {{shipmentData.pharmacy}} </div>
+            <div class="description">Humidity: {{shipmentData.pharmacyhumidity}} </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui icon message" [ngClass]="{'error': shipmentData.status === 'FAIL', 'success': shipmentData.status === 'PASS'}">
+      <div class="content">
+        <div class="header" *ngIf="shipmentData.status === 'PASS'">
+          Payment Successful !
+        </div>
+        <div class="header" *ngIf="shipmentData.status === 'FAIL'">
+            Payment Failed !
+        </div>
+      </div>
+      <i class="credit card icon ml-20"></i>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="Chain">
+  <div class="ui center aligned header">
+    Chain...
+  </div>
+  <div class="five column divided stackable center aligned ui grid">
+    <div class="cloumn">
+      <div class="ui huge-icon icon header step">
+        <i class="hospital outline circular link icon">
+          <div class="hospital-details">
+            <div class="content">
+              <div class="ui small primary button">Add</div>
+              <div class="ui small button">View</div>
+            </div>
+          </div>
+        </i>
+        <div class="content">
+            <div class="title">Confirm Order</div>
+            <div class="description">Sample Step 2</div>
+          </div>
+      </div>
+    </div>
+    <div class="cloumn">
+      <div class="ui huge-icon icon header">
+        <i class="user md circular link icon"></i>
+      </div>
+    </div>
+    <div class="cloumn">
+      <div class="ui huge-icon icon header">
+        <i class="ambulance circular link icon disabled"></i>
+      </div>
+    </div>
+    <div class="cloumn">
+      <div class="ui huge-icon icon header">
+        <i class="medkit circular link icon"></i>
+      </div>
+    </div>
+    <div class="cloumn">
+      <div class="ui huge-icon icon header">
+        <i class="hospital circular link icon"></i>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="col-xs-6 col-sm-3 placeholder">
+    <h4>Block</h4>
+    <span class="text-muted" id="label2"></span>
+  </div>
+  <div class="col-xs-6 col-sm-3 placeholder">
+      <h4>Sols</h4>
+      <span class="text-muted" id="label3"></span>
+    </div> -->

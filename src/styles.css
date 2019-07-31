@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
+.main-container {
+    background: #607d8b33;
+    background-image: url('assets/BlankMap-World-2000.png');
+    background-size: cover;
+    min-height: 850px;
+    opacity: 0.7;
+  }
+
+  .mdspTitle {
+    color: rgb(2, 105, 165) !important;
+  }
+footer {
+    bottom:0;
+    position: relative;
+    padding: 0 2rem 0 2rem;
+    margin-top: 80px; /*conditional */
+}
+.footer-text {
+    font-weight: bold;
+    font-size: 1rem;
+    color: grey;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.ui.selectable.inverted.table tbody tr.failed {
+    background: #f0adad80!important;
+}
+.ui.selectable.inverted.table tbody tr.failed:hover {
+    background: #f0adad80!important;
+}
+.error {
+    background: #f0adad80!important;
+}
